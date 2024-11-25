@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
 import '@/assets/styles/globals.css'
-// import { title } from 'process';
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 export const metadata = {
     title: 'Propertly',
@@ -9,10 +10,13 @@ export const metadata = {
 }
 
 const MainLayout: React.FC<PropsWithChildren> = ({children}) => {
+
     return ( 
         <html>
             <body>
+                <NavBar />
                 <main>{children}</main>
+                <Footer />
             </body> 
         </html>
      );
