@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import '@/assets/styles/globals.css'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
+import AuthProvider from '@/components/AuthProvider'
 
 export const metadata = {
     title: 'Propertly',
@@ -12,6 +13,7 @@ export const metadata = {
 const MainLayout: React.FC<PropsWithChildren> = ({children}) => {
 
     return ( 
+        <AuthProvider>
         <html>
             <body>
                 <NavBar />
@@ -19,6 +21,7 @@ const MainLayout: React.FC<PropsWithChildren> = ({children}) => {
                 <Footer />
             </body> 
         </html>
+        </AuthProvider>
      );
 }
  

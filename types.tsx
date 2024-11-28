@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-
 import {  Types } from "mongoose";
-
+import { User, Account, Profile } from 'next-auth';
+import { ClientSafeProvider } from "next-auth/react";
 export type IImage = string[]
 
 export interface IProperty {
@@ -43,7 +43,22 @@ export interface PropProp {
     property: IProperty
 }
 
+export interface IReactNode {
+  children: ReactNode,
+
+}
+
 export interface HeaderImageProp {
     image: string
 }
+
+export interface IGoogleUser {
+  user: User;
+  account: Account | null;
+  profile?: Profile;
+  email?: { verificationRequest?: boolean };
+  credentials?: Record<string, unknown>;
+}
+
+export type Providers = Record<string, ClientSafeProvider> | null;
   
