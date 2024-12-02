@@ -54,7 +54,7 @@ const PropertyDetails:React.FC<PropProp> = ({property}) => {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-              <h3 className="text-lg  mb-6">{property.description}</h3>
+              <h3 className="text-lg  mb-6">Description and Details</h3>
               <div
                 className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9"
               >
@@ -72,7 +72,7 @@ const PropertyDetails:React.FC<PropProp> = ({property}) => {
                 </p>
               </div>
               <p className="text-gray-500 mb-4">
-                This is a beautiful apartment located near the commons
+              {property.description}
               </p>
             </div>
 

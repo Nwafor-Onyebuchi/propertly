@@ -43,6 +43,11 @@ export interface PropProp {
     property: IProperty
 }
 
+export interface ErrorPageType {
+  children?: ReactNode,
+  error: Error
+}
+
 export interface IReactNode {
   children: ReactNode,
 
