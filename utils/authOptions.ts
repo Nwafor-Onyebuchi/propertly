@@ -65,3 +65,5 @@ export const getAuthOptions = (): AuthOptions | string => {
 
     return authOptions;
 };
+
+
