@@ -6,6 +6,7 @@ export type IImage = string[]
 
 export interface IProperty {
   _id?:  Types.ObjectId | string;
+  id?: string;
   owner?: Types.ObjectId | string;
   _v?: number | undefined,
   name?: string;
@@ -43,6 +44,11 @@ export interface PropProp {
     property: IProperty
 }
 
+export interface PropPropList {
+  // children?: ReactNode,
+  property: IProperty[]
+}
+
 export interface ErrorPageType {
   children?: ReactNode,
   error: Error
@@ -66,4 +72,15 @@ export interface IGoogleUser {
 }
 
 export type Providers = Record<string, ClientSafeProvider> | null;
+
+export type SessionUser = {
+  user: {
+    id: string;
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
+  };
+  userId: string;
+} | null;
+
   

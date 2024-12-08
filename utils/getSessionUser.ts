@@ -1,8 +1,9 @@
 import { getServerSession } from 'next-auth/next';
 import { getAuthOptions } from '@/utils/authOptions';
+import { SessionUser } from '@/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const getSessionUser = async ()=> {
+export const getSessionUser = async (): Promise<SessionUser>=> {
    
         const authOptions = getAuthOptions(); 
         if (typeof authOptions === 'string') {
