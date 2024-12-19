@@ -1,18 +1,16 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { IProperty } from "@/types";
+// Remove the duplicate import statement
 import Link from "next/link";
+import {toast} from 'react-toastify'
 import deleteProperty from "@/app/actions/deleteProperty";
+import { IProperty } from "@/types";
 
-
-const ProfilePproperties = ({ properties }) => {
+const ProfilePproperties = ({ properties }: { properties: IProperty[] }) => {
   const [userProperties, setUserProperties] = useState(properties);
 
-//   console.log('first', properties.length)
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const handleDelete = async (propertyId: any) => {
+const handleDelete = async (propertyId: string) => {
   const confirm = window.confirm('Are you sure about this?')
 
   if(!confirm) return
@@ -22,6 +20,8 @@ const handleDelete = async (propertyId: any) => {
   const updatedProps = userProperties.filter((property:IProperty)=>property.id !== propertyId)
 
   setUserProperties(updatedProps)
+
+  toast.success('Property deleted successfully')
 }
 
   return userProperties.map((property:IProperty, index:number)=>(
@@ -41,14 +41,14 @@ const handleDelete = async (propertyId: any) => {
       </div>
       <div className="mt-2">
         <Link
-          href="/add-property"
+          href={`/properties/${property.id}/edit`}
           className="bg-blue-500 text-white px-3 py-3 rounded-md mr-2 hover:bg-blue-600"
         >
           Edit
         </Link>
         <button
           className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600"
-          type="button" onClick={()=>handleDelete(property.id)}
+          type="button" onClick={()=>handleDelete(property.id || '')}
         >
           Delete
         </button>
