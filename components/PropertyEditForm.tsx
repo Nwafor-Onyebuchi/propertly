@@ -1,4 +1,6 @@
-const EditForm = ({ property }) => {
+import { IProperty } from "@/types";
+
+const EditForm = ({ property }:{property: IProperty}) => {
   return (
     <form>
       <h2 className="text-3xl text-center font-semibold mb-6">Edit Property</h2>
