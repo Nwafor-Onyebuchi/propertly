@@ -1,8 +1,12 @@
+import { updatedProperty } from "@/app/actions/updateProperty";
 import { IProperty } from "@/types";
 
 const EditForm = ({ property }:{property: IProperty}) => {
+
+const updatePropertyById = updatedProperty.bind(null, property.id || '');
+
   return (
-    <form>
+    <form action={updatePropertyById}>
       <h2 className="text-3xl text-center font-semibold mb-6">Edit Property</h2>
 
       <div className="mb-4">
@@ -405,7 +409,7 @@ const EditForm = ({ property }:{property: IProperty}) => {
         />
       </div>
 
-      <div className="mb-4">
+      {/* <div className="mb-4">
         <label htmlFor="images" className="block text-gray-700 font-bold mb-2">
           Images (Select up to 4 images)
         </label>
@@ -417,7 +421,7 @@ const EditForm = ({ property }:{property: IProperty}) => {
           accept="image/*"
           multiple
         />
-      </div>
+      </div> */}
 
       <div>
         <button

@@ -29,7 +29,7 @@ const handleDelete = async (propertyId: string) => {
       <Link href={`/properties/${property.id}`}>
         <Image
           className="h-32 w-full rounded-md object-cover"
-          src={property.images[0]}
+          src={property.images?.[0] ?? ''}
           width={200}
           height={200}
           alt="Property 1"

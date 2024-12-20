@@ -32,7 +32,7 @@ export interface IProperty {
     email?: string;
     phone?: string;
   };
-  images: IImage | string;
+  images?: IImage | string;
   is_featured?: boolean;
   createdAt?: Date | string;
   updatedAt?: Date | string;
