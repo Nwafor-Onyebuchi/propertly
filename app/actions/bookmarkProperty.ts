@@ -21,13 +21,13 @@ export const bookMarProperty = async (property: any) => {
 
     const user = await getUserById(userId)
 
-    console.log(user, property)
+    // console.log(user, property)
 
     if(!user) {
         throw new Error('User not found')
     }
 
-    const doc = serializeMongoseObject(user.bookmarks)
+    const doc = await serializeMongoseObject(user.bookmarks)
     const isBookMarked = doc.includes(property._id)
 
     let message;
