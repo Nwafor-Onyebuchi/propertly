@@ -4,7 +4,6 @@ import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import { IProperty } from "@/types";
 import { Props } from "@/types/interfaces";
-import { serializeMongoArray } from "@/utils/serializeData";
 import Link from "next/link";
 import { FaArrowCircleLeft } from "react-icons/fa";
 
