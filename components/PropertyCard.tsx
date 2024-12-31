@@ -26,7 +26,7 @@ const PropertyCard: React.FC<PropProp> = ({ property }) => {
   return (
     <div className="rounded-xl shadow-md relative">
       <Image
-        src={`${property.images[0]}`}
+        src={`${property.images?.[0] ?? ""}`}
         alt=""
         width={0}
         height={0}

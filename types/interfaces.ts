@@ -8,3 +8,20 @@ export interface IUser extends Document {
     createdAt?: Date; // Automatically added by timestamps
     updatedAt?: Date; // Automatically added by timestamps
 }
+
+   
+export interface IQueryType {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    $or?: any[],
+    type?: RegExp
+
+}
+
+export interface SearchParams {
+    location?: string; 
+    propertyType?: string; 
+}
+
+export interface Props {
+    searchParams: SearchParams;
+}
