@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import {  Types } from "mongoose";
 import { User, Account, Profile } from 'next-auth';
 import { ClientSafeProvider } from "next-auth/react";
+import { IUser } from "./types/interfaces";
 export type IImage = string[]
 
 export interface IProperty {
@@ -44,6 +45,25 @@ export interface PropProp {
     property: IProperty
 }
 
+export interface IMessage {
+  sender: IUser;
+  recipient: Types.ObjectId | string;
+  property: IProperty 
+  email: string;
+  phone: string;
+  body: string;
+  read: boolean;
+  _v?: number,
+  _id?: Types.ObjectId | string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+}
+
+export interface IMessageProp {
+  children?: ReactNode,
+  message: IMessage
+}
+
 export interface PropPropList {
   // children?: ReactNode,
   property: IProperty[]
@@ -82,5 +102,10 @@ export type SessionUser = {
   };
   userId: string;
 } | null;
+
+export interface GlobalContextType {
+  unreadMessageCount?: number;
+  setUnreadMessageCount: (updateFn: (prev: number) => number) => void;
+}
 
   

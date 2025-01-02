@@ -46,7 +46,7 @@ const PropertiesPage: NextPage<{
             <aside>
               <BookmarkButton property={property}/>
               <ShareButtons property={property}/>
-              <ContactForm />
+              <ContactForm property={property}/>
 
             </aside>
           </div>
