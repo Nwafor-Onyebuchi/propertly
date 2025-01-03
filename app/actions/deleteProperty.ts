@@ -36,8 +36,6 @@ async function deleteProperty (propertyId: string) {
         
     })
 
-    console.log(publicIds)
-
     //  Delete images from cloudinary
     if(publicIds.length > 0) {
         for(const publicId of publicIds){

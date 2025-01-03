@@ -17,8 +17,6 @@ const SavedPropertyPage = async () => {
 
     const {bookmarks} = await User.findById(userId).populate('bookmarks')
 
-    console.log(bookmarks)
-
     return <section className="px-4 py-6">
         <div className="container lg:container m-auto px-4 py-6">
             <h1 className="text-2xl mb-4">Save Properties</h1>

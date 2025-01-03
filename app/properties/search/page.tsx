@@ -4,10 +4,12 @@ import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import { IProperty } from "@/types";
 import { Props } from "@/types/interfaces";
+
+
 import Link from "next/link";
 import { FaArrowCircleLeft } from "react-icons/fa";
 
-const SearchResultPage = async ({ searchParams }: Props) => {
+const SearchResultPage = async ({ searchParams }: { searchParams: Promise<Props> }) => {
   const { location, propertyType } = await searchParams;
 
   await connectDB();

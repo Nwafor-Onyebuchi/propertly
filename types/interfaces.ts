@@ -23,5 +23,7 @@ export interface SearchParams {
 }
 
 export interface Props {
-    searchParams: SearchParams;
-}
+    propertyType: string;
+    location: string;
+    // Add other properties if needed
+  }

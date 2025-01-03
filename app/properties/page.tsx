@@ -3,22 +3,20 @@
 import Pagination from '@/components/Pagination';
 import PropertyCard from '@/components/PropertyCard';
 import connectDB from '@/config/database';
-import  Property  from '@/models/Property';
+import Property from '@/models/Property';
 import { PropertiesPageProps } from '@/types';
 
-const PropertiesPage = async({searchParams}: {searchParams: PropertiesPageProps}) => {
+const PropertiesPage = async ({ searchParams }: { searchParams: Promise<PropertiesPageProps> }) => {
+    const { page = 1, pageSize = 3 } = await searchParams;
 
-    const {page = 1, pageSize=3} = await searchParams
+    await connectDB();
 
+    const skip = (page - 1) * pageSize;
+    const total = await Property.countDocuments({});
 
-    await connectDB()
+    const showPagination = total > pageSize;
 
-    const skip = (page - 1) * pageSize
-    const total = await Property.countDocuments({})
-
-    const showPagination = total > pageSize
-
-    const properties = await Property.find({}).skip(skip).limit(pageSize)
+    const properties = await Property.find({}).skip(skip).limit(pageSize);
 
     return (
         <section className='px-4 py-6'>
@@ -27,16 +25,15 @@ const PropertiesPage = async({searchParams}: {searchParams: PropertiesPageProps}
                     <p>No properties found</p>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {properties.map((property)=> (
+                        {properties.map((property) => (
                             <PropertyCard key={property._id} property={property} />
                         ))}
                     </div>
                 )}
-            {showPagination && <Pagination page={page} pageSize={pageSize} total={total} />}
+                {showPagination && <Pagination page={page} pageSize={pageSize} total={total} />}
             </div>
-            
         </section>
-    ) ;
-}
- 
+    );
+};
+
 export default PropertiesPage;

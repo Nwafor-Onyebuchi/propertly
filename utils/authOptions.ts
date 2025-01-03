@@ -35,11 +35,6 @@ export const getAuthOptions = (): AuthOptions | string => {
                 email,
                 credentials,
             }: IGoogleUser) {
-                console.log({cuser:user,
-                    caccount:account,
-                    cprofile:profile,
-                    cemail:email,
-                    ccredentials:credentials})
                 // Connect to the database and validate user existence
                 await connectDB();
                 const existingUser = await User.findOne({ email: profile?.email });

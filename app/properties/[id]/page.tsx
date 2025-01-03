@@ -6,24 +6,17 @@ import PropertyImages from "@/components/PropertyImages";
 import ShareButtons from "@/components/Sharebutton";
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
-import { NextPage } from "next";
+import { PageProps } from "@/types";
+// import { NextPage } from "next";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
-interface Params {
-  id: string;
-}
 
-interface Search {
-  name: string;
-}
 
-const PropertiesPage: NextPage<{
-  params: Params;
-  searchParams: Search;
-}> = async ({ params }) => {
+const PropertiesPage= async ({ params }: PageProps) => {
   await connectDB;
   const {id} = await params
+
   const property = await Property.findById(id);
 
   return (

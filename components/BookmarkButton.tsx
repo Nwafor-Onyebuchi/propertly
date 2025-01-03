@@ -27,7 +27,7 @@ const BookmarkButton = ({ property }: PropProp) => {
         const status = await checkBookmarkStatus(property._id);
         setIsBookmarked(status.isBookMarked);
       } catch (error) {
-        toast.error(`Error checking bookmark status: ${error.message || error}`);
+        toast.error(`Error checking bookmark status: ${(error as Error).message || error}`);
       } finally {
         setIsLoading(false); // Ensure loading stops in both success and error cases
       }
@@ -47,7 +47,7 @@ const BookmarkButton = ({ property }: PropProp) => {
       setIsBookmarked(!isBookmarked); // Toggle the bookmark state dynamically
       toast.success(bookmark.message);
     } catch (error) {
-      toast.error(`Error updating bookmark: ${error.message || error}`);
+      toast.error(`Error updating bookmark: ${(error as Error).message || error}`);
     }
   };
 

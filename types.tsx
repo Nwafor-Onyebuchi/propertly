@@ -120,4 +120,9 @@ export interface PaginationProps {
   total: number;
 };
 
+export type PageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
   
