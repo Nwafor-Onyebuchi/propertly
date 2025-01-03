@@ -108,4 +108,16 @@ export interface GlobalContextType {
   setUnreadMessageCount: (updateFn: (prev: number) => number) => void;
 }
 
+export interface PropertiesPageProps {
+  page: number;
+  pageSize: number;
+
+}
+
+export interface PaginationProps {
+  page: number;
+  pageSize: number;
+  total: number;
+};
+
   

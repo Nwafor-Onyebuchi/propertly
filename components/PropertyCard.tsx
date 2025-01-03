@@ -25,6 +25,8 @@ const PropertyCard: React.FC<PropProp> = ({ property }) => {
 
   return (
     <div className="rounded-xl shadow-md relative">
+      <Link  href={`/properties/${property._id}`}>
+     
       <Image
         src={`${property.images?.[0] ?? ""}`}
         alt=""
@@ -100,6 +102,7 @@ const PropertyCard: React.FC<PropProp> = ({ property }) => {
           </Link>
         </div>
       </div>
+      </Link>
     </div>
   );
 };
