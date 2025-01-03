@@ -6,6 +6,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
 import { GlobalProvider } from "@/context/globalContext";
+import "photoswipe/dist/photoswipe.css";
 
 export const metadata = {
   title: "Propertly",
