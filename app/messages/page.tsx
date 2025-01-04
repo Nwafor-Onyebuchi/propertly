@@ -1,8 +1,8 @@
-import MessageCard from "@/components/MessageCard";
-import connectDB from "@/config/database";
-import { Message } from "@/models/Message";
-import { IMessage } from "@/types";
-import { getSessionUser } from "@/utils/getSessionUser";
+import MessageCard from "../../components/MessageCard";
+import connectDB from "../../config/database";
+import { Message } from "../../models/Message";
+import { IMessage } from "./../../types";
+import { getSessionUser } from "../../utils/getSessionUser";
 
 const MessagePage = async () => {
   await connectDB();

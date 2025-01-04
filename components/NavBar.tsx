@@ -2,12 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import profileDefault from "@/assets/images/profile.png";
-import logo from "@/assets/images/logo-white.png";
+import profileDefault from "../assets/images/profile.png";
+import logo from "../assets/images/logo-white.png";
 import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-import { Providers } from "@/types";
+import { Providers } from "../types";
 import UnreadMessageCount from "./UnreadMessageCount";
 
 const NavBar = () => {

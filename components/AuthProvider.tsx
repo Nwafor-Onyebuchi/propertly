@@ -1,5 +1,5 @@
 'use client'
-import { IReactNode } from "@/types";
+import { IReactNode } from "../types";
 import {SessionProvider} from 'next-auth/react'
 
 const AuthProvider:React.FC<IReactNode> = ({children}) => {

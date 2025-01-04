@@ -1,5 +1,5 @@
-import { useGlobalContext } from "@/context/globalContext";
-import { GlobalContextType } from "@/types";
+import { useGlobalContext } from "../context/globalContext";
+import { GlobalContextType } from "../types";
 
 const UnreadMessageCount = () => {
     const {unreadMessageCount } = useGlobalContext() as GlobalContextType;
