@@ -20,14 +20,7 @@
     ],
    "baseUrl": "./",
     "paths": {
-      "@/utils/*": ["utils/*"],
-      "@/components/*": ["components/*"],
-      "@/assets/*": ["assets/*"],
-      "@/models/*": ["models/*"],
-      "@/config/*": ["config/*"],
-      "@/public/*": ["public/*"],
-      "@/type/*": ["types/*"],
-      "@/conext/*": ["context/*"],
+      "@/*": ["./*"]
     }
     
   },

@@ -1,4 +1,4 @@
-import { getAuthOptions } from '@/utils/authOptions';
+import { getAuthOptions } from '../../../../utils/authOptions';
 import NextAuth from 'next-auth/next';
 
 const authOptions = getAuthOptions();

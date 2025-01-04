@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "@/assets/styles/globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import AuthProvider from "@/components/AuthProvider";
-import { GlobalProvider } from "@/context/globalContext";
+import "../assets/styles/globals.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import AuthProvider from "../components/AuthProvider";
+import { GlobalProvider } from "../context/globalContext";
 import "photoswipe/dist/photoswipe.css";
 
 export const metadata = {
