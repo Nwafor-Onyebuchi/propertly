@@ -1,8 +1,8 @@
-import FeaturedPropertie from "@/components/FeaturedProperties";
-import Hero from "@/components/Hero";
-import Homeproperties from "@/components/HomeProperties";
-import InfoBoxes from "@/components/InfoBoxes";
-import connectDB from "@/config/database";
+import FeaturedPropertie from "../components/FeaturedProperties";
+import Hero from "../components/Hero";
+import Homeproperties from "../components/HomeProperties";
+import InfoBoxes from "../components/InfoBoxes";
+import connectDB from "../config/database";
 
 
 const HomePage = () => {

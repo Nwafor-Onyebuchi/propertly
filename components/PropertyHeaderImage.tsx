@@ -1,4 +1,4 @@
-import { HeaderImageProp } from "@/types";
+import { HeaderImageProp } from "../types";
 import Image from "next/image";
 
 

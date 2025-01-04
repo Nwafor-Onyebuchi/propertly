@@ -1,5 +1,5 @@
-import { updatedProperty } from "@/app/actions/updateProperty";
-import { IProperty } from "@/types";
+import { updatedProperty } from "../app/actions/updateProperty";
+import { IProperty } from "../types";
 
 const EditForm = ({ property }:{property: IProperty}) => {
 

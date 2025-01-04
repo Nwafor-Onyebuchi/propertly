@@ -3,11 +3,11 @@ import { useState } from "react";
 import {toast} from 'react-toastify'
 
 
-import {IMessageProp } from "@/types";
-import markMessageAsRead from "@/app/actions/markMessageAsRead";
-import deleteMessage from "@/app/actions/deleteMessage";
-import { useGlobalContext } from "@/context/globalContext";
-import { GlobalContextType } from "@/types";
+import {IMessageProp } from "../types";
+import markMessageAsRead from "../app/actions/markMessageAsRead";
+import deleteMessage from "../app/actions/deleteMessage";
+import { useGlobalContext } from "../context/globalContext";
+import { GlobalContextType } from "../types";
 
 const MessageCard = ({message}: IMessageProp) => {
 

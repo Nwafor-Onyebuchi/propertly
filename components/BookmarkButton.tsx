@@ -1,8 +1,8 @@
 "use client";
 
-import { bookMarProperty } from "@/app/actions/bookmarkProperty";
-import { checkBookmarkStatus } from "@/app/actions/checkBookmarkStatus";
-import { PropProp } from "@/types";
+import { bookMarProperty } from "../app/actions/bookmarkProperty";
+import { checkBookmarkStatus } from "../app/actions/checkBookmarkStatus";
+import { PropProp } from "../types";
 import { useSession } from "next-auth/react";
 // import Error from "next/error";
 import { useState, useEffect } from "react";

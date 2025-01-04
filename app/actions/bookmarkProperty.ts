@@ -1,10 +1,10 @@
 'use server'
 
-import connectDB from "@/config/database"
-import { User } from "@/models/User"
-import { getSessionUser } from "@/utils/getSessionUser"
-import { getUserById } from "@/utils/repositories"
-import { serializeMongoseObject } from "@/utils/serializeData"
+import connectDB from "../../config/database"
+import { User } from "../../models/User"
+import { getSessionUser } from "../../utils/getSessionUser"
+import { getUserById } from "../../utils/repositories"
+import { serializeMongoseObject } from "../../utils/serializeData"
 import { revalidatePath } from "next/cache"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

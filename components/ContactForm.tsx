@@ -4,8 +4,8 @@ import { useFormState } from "react-dom";
 import { useSession } from "next-auth/react";
 import { toast } from "react-toastify";
 
-import { PropProp } from "@/types";
-import addMessage from "@/app/actions/addMessage";
+import { PropProp } from "../types";
+import addMessage from "../app/actions/addMessage";
 import MessageButton from "./MeaageButton";
 
 const ContactForm = ({property}: PropProp) => {

@@ -1,9 +1,9 @@
 'use server'
 
-import connectDB from "@/config/database"
-import { getSessionUser } from "@/utils/getSessionUser"
-import { getUserById } from "@/utils/repositories"
-import { serializeMongoseObject } from "@/utils/serializeData"
+import connectDB from "../../config/database"
+import { getSessionUser } from "../../utils/getSessionUser"
+import { getUserById } from "../../utils/repositories"
+import { serializeMongoseObject } from "../../utils/serializeData"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const checkBookmarkStatus = async (propertId: any) => {

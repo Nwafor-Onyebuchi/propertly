@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import GoogleProvider from 'next-auth/providers/google';
 import { AuthOptions } from 'next-auth';
-import { IGoogleUser } from '@/types';
-import connectDB from '@/config/database';
-import { User } from '@/models/User'; 
+import { IGoogleUser } from '../types';
+import connectDB from '../config/database';
+import { User } from '../models/User'; 
 
 const GOOGLE_AUTH_CLIENT_ID = process.env.GOOGLE_AUTH_CLIENT_ID;
 const GOOGLE_AUTH_SECRET = process.env.GOOGLE_AUTH_SECRET;

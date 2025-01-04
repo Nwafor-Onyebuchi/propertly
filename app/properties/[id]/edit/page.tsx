@@ -1,7 +1,7 @@
-import EditForm from "@/components/PropertyEditForm";
-import connectDB from "@/config/database";
-import Property from "@/models/Property";
-import { PageProps } from "@/types";
+import EditForm from "../../../../components/PropertyEditForm";
+import connectDB from "../../../../config/database";
+import Property from "./../../../../models/Property";
+import { PageProps } from "../../../../types";
 
 
 

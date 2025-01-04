@@ -1,6 +1,6 @@
 "use client";
 
-import { PropProp } from "@/types";
+import { PropProp } from "../types";
 import {
   FacebookShareButton,
   TwitterShareButton,

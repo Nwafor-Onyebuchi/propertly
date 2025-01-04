@@ -1,4 +1,4 @@
-import PropertyAddForm from "@/components/PropertyAddForm";
+import PropertyAddForm from "../../../components/PropertyAddForm";
 
 const AddPropertyPage = () => {
     return <section className="bg-blue-50">

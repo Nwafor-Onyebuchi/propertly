@@ -1,5 +1,5 @@
-import { IUser } from '@/types/interfaces';
-import {User} from '@/models/User'
+import { IUser } from '../types/interfaces';
+import {User} from '../models/User'
 // import { ObjectId } from 'mongoose';
 
 export async function getUserByEmail(email: string): Promise<IUser | null> {

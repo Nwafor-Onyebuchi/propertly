@@ -1,7 +1,7 @@
-import connectDB from "@/config/database";
-import Property from "@/models/Property";
+import connectDB from "../config/database";
+import Property from "../models/Property";
 import FeaturedPropertyCard from "./FeaturedPropertyCard";
-import { IProperty } from "@/types"; // Assuming IProperty is the interface for Property objects
+import { IProperty } from "../types"; // Assuming IProperty is the interface for Property objects
 
 const FeaturedPropertie = async () => {
 

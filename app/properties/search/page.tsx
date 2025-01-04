@@ -1,9 +1,9 @@
-import PropertyCard from "@/components/PropertyCard";
-import SearchForm from "@/components/PropertySearchForm";
-import connectDB from "@/config/database";
-import Property from "@/models/Property";
-import { IProperty } from "@/types";
-import { Props } from "@/types/interfaces";
+import PropertyCard from "../../../components/PropertyCard";
+import SearchForm from "../../../components/PropertySearchForm";
+import connectDB from "../../../config/database";
+import Property from "../../../models/Property";
+import { IProperty } from "../../../types";
+import { Props } from "../../../types/interfaces";
 
 
 import Link from "next/link";

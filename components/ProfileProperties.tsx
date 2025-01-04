@@ -4,8 +4,8 @@ import Image from "next/image";
 // Remove the duplicate import statement
 import Link from "next/link";
 import {toast} from 'react-toastify'
-import deleteProperty from "@/app/actions/deleteProperty";
-import { IProperty } from "@/types";
+import deleteProperty from "../app/actions/deleteProperty";
+import { IProperty } from "../types";
 
 const ProfilePproperties = ({ properties }: { properties: IProperty[] }) => {
   const [userProperties, setUserProperties] = useState(properties);

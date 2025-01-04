@@ -1,6 +1,6 @@
 'use client'
 
-import { ErrorPageType } from "@/types";
+import { ErrorPageType } from "../types";
 import Link from "next/link";
 import {FaExclamationCircle} from 'react-icons/fa'
 

@@ -1,10 +1,10 @@
 // 'use client'
 
-import Pagination from '@/components/Pagination';
-import PropertyCard from '@/components/PropertyCard';
-import connectDB from '@/config/database';
-import Property from '@/models/Property';
-import { PropertiesPageProps } from '@/types';
+import Pagination from '../../components/Pagination';
+import PropertyCard from '../../components/PropertyCard';
+import connectDB from '../../config/database';
+import Property from '../../models/Property';
+import { PropertiesPageProps } from '../../types';
 
 const PropertiesPage = async ({ searchParams }: { searchParams: Promise<PropertiesPageProps> }) => {
     const { page = 1, pageSize = 3 } = await searchParams;

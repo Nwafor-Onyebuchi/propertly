@@ -1,11 +1,11 @@
 import Image from "next/image";
-import connectDB from "@/config/database";
-import Property from "@/models/Property";
-import {getSessionUser} from '@/utils/getSessionUser'
-import profileDefault from '@/assets/images/profile.png'
-import { SessionUser } from "@/types";
-import ProfilePproperties from "@/components/ProfileProperties";
-import { serializeMongoArray } from "@/utils/serializeData";
+import connectDB from "../../config/database";
+import Property from "../../models/Property";
+import {getSessionUser} from '../../utils/getSessionUser'
+import profileDefault from '../../assets/images/profile.png'
+import { SessionUser } from "../../types";
+import ProfilePproperties from "../../components/ProfileProperties";
+import { serializeMongoArray } from "../../utils/serializeData";
 
 const ProfilePage = async() => {
 

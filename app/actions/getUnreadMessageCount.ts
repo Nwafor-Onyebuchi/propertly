@@ -1,9 +1,9 @@
 'use server'
 
-import connectDB from "@/config/database"
-import { Message } from "@/models/Message"
-import { getSessionUser } from "@/utils/getSessionUser"
-import { getUserById } from "@/utils/repositories"
+import connectDB from "../../config/database"
+import { Message } from "../../models/Message"
+import { getSessionUser } from "../../utils/getSessionUser"
+import { getUserById } from "../../utils/repositories"
 
 
 const getUnreadMessage = async () => {

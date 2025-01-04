@@ -7,8 +7,8 @@ import {
   FaBath,
   FaMapMarker,
 } from "react-icons/fa";
-import { PropProp } from "@/types";
-// import logo from '@/assets/images/'
+import { PropProp } from "../types";
+
 
 const PropertyCard: React.FC<PropProp> = ({ property }) => {
   const getRateDisplay = () => {
