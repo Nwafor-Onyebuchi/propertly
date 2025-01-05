@@ -42,7 +42,9 @@ export interface IProperty {
 
 export interface PropProp {
     children?: ReactNode,
-    property: IProperty
+    property: IProperty,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    key?:any
 }
 
 export interface IMessage {

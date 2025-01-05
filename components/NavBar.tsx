@@ -5,7 +5,7 @@ import Image from "next/image";
 import profileDefault from "../assets/images/profile.png";
 import logo from "../assets/images/logo-white.png";
 import { FaGoogle } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { Providers } from "../types";
 import UnreadMessageCount from "./UnreadMessageCount";
@@ -260,7 +260,11 @@ const NavBar = () => {
                 Add Property
               </Link>
             )}
-            <button
+            {providers &&
+                  Object.values(providers).map((provider, index) => (
+                    <button
+                    onClick={() => signIn(provider.id)}
+                      key={index}
               className={`${
                 session ? "hidden" : ""
               } flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5`}
@@ -268,6 +272,8 @@ const NavBar = () => {
               <FaGoogle className="text-white mr-2" />
               <span>Login or Register</span>
             </button>
+                  ))}
+            
           </div>
         </div>
       )}
