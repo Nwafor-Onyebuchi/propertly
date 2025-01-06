@@ -3,7 +3,7 @@ import connectDB from "../../config/database";
 import { Message } from "../../models/Message";
 import { IMessage } from "./../../types";
 import { getSessionUser } from "../../utils/getSessionUser";
-import { serializeMongoArray, serializeMongoArrayMessages } from "@/utils/serializeData";
+import { serializeMongoArrayMessages } from "@/utils/serializeData";
 
 const MessagePage = async () => {
   await connectDB();
