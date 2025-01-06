@@ -2,6 +2,8 @@ import {  PropProp } from "../types";
 import { FaBath, FaBed, FaCheck, FaMapMarker, FaRulerCombined, FaTimes } from "react-icons/fa";
 
 const PropertyDetails:React.FC<PropProp> = ({property}) => {
+
+  
     return ( 
         <main>
             <div

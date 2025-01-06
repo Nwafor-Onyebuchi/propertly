@@ -14,6 +14,8 @@ const PropertyCard: React.FC<PropProp> = ({ property }) => {
   const getRateDisplay = () => {
     const { rates } = property;
 
+    // console.log(property)
+
     if (rates?.monthly) {
       return `$${rates.monthly.toLocaleString()}/mo`;
     } else if (rates?.weekly) {
@@ -95,7 +97,7 @@ const PropertyCard: React.FC<PropProp> = ({ property }) => {
             </span>
           </div>
           <Link
-            href={`/properties/${property._id}`}
+            href={`/properties/${property.id}`}
             className="h-[36px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-center text-sm"
           >
             Details

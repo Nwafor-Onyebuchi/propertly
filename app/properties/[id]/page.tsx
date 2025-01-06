@@ -1,3 +1,4 @@
+import { serializeMongoObject } from "@/utils/serializeData";
 import BookmarkButton from "../../../components/BookmarkButton";
 import ContactForm from "../../../components/ContactForm";
 import PropertyDetails from "../../../components/PropertyDetails";
@@ -17,7 +18,10 @@ const PropertiesPage= async ({ params }: PageProps) => {
   await connectDB;
   const {id} = await params
 
-  const property = await Property.findById(id);
+  const propertyDoc = await Property.findById(id);
+
+  const property = serializeMongoObject(propertyDoc._doc)
+
 
   return (
     <>

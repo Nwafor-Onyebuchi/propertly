@@ -63,7 +63,9 @@ export interface IMessage {
 
 export interface IMessageProp {
   children?: ReactNode,
-  message: IMessage
+  message: IMessage,
+  key?:string
+
 }
 
 export interface PropPropList {

@@ -3,6 +3,7 @@ import connectDB from "../../config/database";
 import { Message } from "../../models/Message";
 import { IMessage } from "./../../types";
 import { getSessionUser } from "../../utils/getSessionUser";
+import { serializeMongoArray, serializeMongoArrayMessages } from "@/utils/serializeData";
 
 const MessagePage = async () => {
   await connectDB();
@@ -25,7 +26,12 @@ const MessagePage = async () => {
     .populate("property", "name")
     .lean();
 
-    const allMessages = [...unReadMessages, ...readMessages];
+    const allMessagesDocs = [...unReadMessages, ...readMessages];
+
+
+
+    const allMessages = serializeMongoArrayMessages(allMessagesDocs) as IMessage[];
+
 
 
   return (
