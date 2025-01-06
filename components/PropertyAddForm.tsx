@@ -19,11 +19,11 @@ const PropertyAddForm = () => {
                 className="border rounded w-full py-2 px-3"
                 
               >
-                <option value="Apartment">Apartment</option>
-                <option value="Condo">Condo</option>
-                <option value="House">House</option>
-                <option value="CabinOrCottage">Cabin or Cottage</option>
-                <option value="Room">Room</option>
+                <option value="Apartment">Self Con</option>
+                <option value="Condo">Mini Flat</option>
+                <option value="House">2 Bed Room</option>
+                <option value="CabinOrCottage">3 Bed Room</option>
+                <option value="Room">Duplex</option>
                 <option value="Studio">Studio</option>
                 <option value="Other">Other</option>
               </select>
@@ -144,7 +144,7 @@ const PropertyAddForm = () => {
                     value="Wifi"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_wifi">Wifi</label>
+                  <label htmlFor="amenity_wifi">POP Ceilling</label>
                 </div>
                 <div>
                   <input
@@ -154,7 +154,7 @@ const PropertyAddForm = () => {
                     value="Full kitchen"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_kitchen">Full kitchen</label>
+                  <label htmlFor="amenity_kitchen">Kitchen Cabinets</label>
                 </div>
                 <div>
                   <input
@@ -164,7 +164,7 @@ const PropertyAddForm = () => {
                     value="Washer & Dryer"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_washer_dryer">Washer & Dryer</label>
+                  <label htmlFor="amenity_washer_dryer">Wardrobe</label>
                 </div>
                 <div>
                   <input
@@ -174,7 +174,7 @@ const PropertyAddForm = () => {
                     value="Free Parking"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_free_parking">Free Parking</label>
+                  <label htmlFor="amenity_free_parking">Running Water</label>
                 </div>
                 <div>
                   <input
@@ -184,7 +184,7 @@ const PropertyAddForm = () => {
                     value="Swimming Pool"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_pool">Swimming Pool</label>
+                  <label htmlFor="amenity_pool">Steady Power Supply</label>
                 </div>
                 <div>
                   <input
@@ -194,7 +194,7 @@ const PropertyAddForm = () => {
                     value="Hot Tub"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_hot_tub">Hot Tub</label>
+                  <label htmlFor="amenity_hot_tub">Security</label>
                 </div>
                 <div>
                   <input
@@ -204,7 +204,7 @@ const PropertyAddForm = () => {
                     value="24/7 Security"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_24_7_security">24/7 Security</label>
+                  <label htmlFor="amenity_24_7_security">Packing Space</label>
                 </div>
                 <div>
                   <input
@@ -215,7 +215,7 @@ const PropertyAddForm = () => {
                     className="mr-2"
                   />
                   <label htmlFor="amenity_wheelchair_accessible"
-                    >Wheelchair Accessible</label
+                    >Heater</label
                   >
                 </div>
                 <div>
@@ -226,7 +226,7 @@ const PropertyAddForm = () => {
                     value="Elevator Access"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_elevator_access">Elevator Access</label>
+                  <label htmlFor="amenity_elevator_access">Private Pumping Machine</label>
                 </div>
                 <div>
                   <input
@@ -236,7 +236,7 @@ const PropertyAddForm = () => {
                     value="Dishwasher"
                     className="mr-2"
                   />
-                  <label htmlFor="amenity_dishwasher">Dishwasher</label>
+                  <label htmlFor="amenity_dishwasher">Private Meter</label>
                 </div>
                 <div>
                   <input
